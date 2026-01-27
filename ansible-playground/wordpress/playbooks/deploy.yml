@@ -27,20 +27,20 @@
         --dbname="{{ db.name }}" \
         --dbuser="{{ db.user  }}" \
         --dbpass="{{ db.password }}" \
-        --dbhost="{{ ip.backend }} \
+        --dbhost="{{ ip.backend }}" \
         --path=/var/www/html \
         --allow-root
 
     - name: Instalamos WordPress
       command:
-      wp core install \
-      --url="{{ certbot.domain }}" \
-      --title="{{ wordpress.title }}" \
-      --admin_user="{{ wordpress.admin_user }}" \
-      --admin_password="{{ wordpress.admin_pass }}" \
-      --admin_email="{{ wordpress.admin_email }}" \
-      --path=/var/www/html \
-      --allow-root  
+        wp core install \
+        --url="{{ certbot.domain }}" \
+        --title="{{ wordpress.title }}" \
+        --admin_user="{{ wordpress.admin_user }}" \
+        --admin_password="{{ wordpress.admin_pass }}" \
+        --admin_email="{{ wordpress.admin_email }}" \
+        --path=/var/www/html \
+        --allow-root
         
     - name: Modificamos los permisos del directorio /var/www/html
       file:

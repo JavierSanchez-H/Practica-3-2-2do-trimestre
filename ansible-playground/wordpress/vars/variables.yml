@@ -1,6 +1,6 @@
 ip:
-    frontend: 18.234.171.122       # Reemplazar por la IP del servidor web Apache
-    backend: 18.234.146.46         # Reemplazar por la IP del servidor de MySQL
+    frontend: 172.31.22.27      # Reemplazar por la IP del servidor web Apache privada
+    backend: 172.31.16.108     # Reemplazar por la IP del servidor de MySQL PRIVADA
 
 db:
     name: wordpress_db
@@ -16,4 +16,4 @@ wordpress:
 
 certbot:
     email: otrousuario@email.es
-    domain: prestashop-daw.ddns.net
+    domain: asir.thesilverpool.com
